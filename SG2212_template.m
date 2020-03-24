@@ -1,0 +1,218 @@
+% Navier-Stokes solver,
+% adapted for course SG2212
+% KTH Mechanics
+%
+% Depends on avg.m and DD.m
+%
+% Code version: 
+% 20180222
+function [maxU,maxV,tser,Tser,centerU,centerV,centerT] = SG2212_template(param)
+close all
+%------------------------------------------
+
+  % My little extra bits
+  maxU = 0;
+  maxV = 0;
+  %---------------------
+  
+  Pr = param.Pr;     % Prandtl number
+  Re = param.Re;      % Reynolds number
+  Ri = param.Ri;       % Richardson number
+  Pe = Re*Pr; %Peclet number
+  Ra = param.Ra;      % Rayleigh number
+  
+  dt = param.dt;      % time step
+  Tf = param.Tf;       % final time
+  Lx = param.Lx;        % width of box
+  Ly = param.Ly;        % height of box
+  Nx = param.Nx;      % number of cells in x
+  Ny = param.Ny;      % number of cells in y
+  ig = param.ig;      % number of iterations between output
+  
+  % Boundary and initial conditions:
+  Utop = param.Utop; 
+  Ubottom = param.Ubottom;
+  Tbottom = param.Tbottom; Ttop = param.Ttop;
+  namp = param.namp;
+
+
+
+%-----------------------------------------
+
+% Number of iterations
+Nit = Tf/dt;
+% Spatial grid: Location of corners 
+x = linspace(0, Lx, Nx+1); 
+y = linspace(0, Ly, Ny+1);
+% Grid spacing
+
+dx = Lx/Nx;
+dy = Ly/Ny;
+% Boundary conditions: 
+uN = x*0+Utop;      vN = avg(x,2)*0;
+uS = x*0+Ubottom;   vS = avg(x,2)*0;
+uW = avg(y,2)*0;    vW = y*0;
+uE = avg(y,2)*0;    vE = y*0;
+TN = avg(x,2)*0 + Ttop;   TS = avg(x,2)*0 + Tbottom;
+% Initial conditions
+U = zeros(Nx-1, Ny); V = zeros(Nx, Ny-1);
+% linear profile for T with random noise
+T = repmat(linspace(Tbottom,Ttop,Ny),Nx,1) + namp*rand(Nx,Ny); % I have my T on p mesh
+% Time series
+tser = [];
+Tser = [];
+
+%-----------------------------------------
+
+% Compute system matrices for pressure 
+% First set homogeneous Neumann condition all around
+% Laplace operator on cell centres: Fxx + Fyy
+Lp = kron(speye(Ny), DD(Nx, dx)) + kron(DD(Ny, dy), speye(Nx));
+% Set one Dirichlet value to fix pressure in that point
+Lp(1,:) = 0; Lp(1,1) = 1;
+% Here you can pre-compute the LU decomposition
+[LLp,ULp] = lu(Lp);
+%-----------------------------------------
+
+% Progress bar (do not replace the ... )
+fprintf(...
+    '[         |         |         |         |         ]\n')
+
+%-----------------------------------------
+
+% Main loop over iterations
+
+for k = 1:Nit
+     
+   % include all boundary points for u and v (linear extrapolation
+   % for ghost cells) into extended array (Ue,Ve)
+   Ue = [uW; U; uE;];
+   Ue = [2*uS'-Ue(:,1) Ue  2*uN'-Ue(:, end)];  
+   Ve = [vS' V vN'];
+   Ve = [2*vW-Ve(1,:); Ve; 2*vE-Ve(end,:)];    
+   Te = [T(1,:); T; T(end,:)]; % dT/dx = 0
+   Te = [2*[TS(1) TS TS(end)]' - Te(:,1), Te, 2*[TN(1) TN TN(end)]' - Te(:,end)];
+   
+   % averaged (Ua,Va) of u and v on corners
+   Ua = avg(Ue, 2);
+   Va = avg(Ve, 1);
+   
+   % construct individual parts of nonlinear terms
+   dUVdx = 1/dx*diff(    Ua(:,2:end-1).*Va(:,2:end-1) ,1,1);     %UV_x
+   dUVdy = 1/dy*diff(    Ua(2:end-1,:).*Va(2:end-1,:) ,1,2);     %UV_y
+   dU2dx = 1/dx*diff(avg(Ue(:,2:end-1),1).^2,1,1);               %UU_x
+   dV2dy = 1/dy*diff(avg(Ve(2:end-1,:),2).^2,1,2);               %VV_y
+   
+
+   % treat viscosity explicitly
+   viscu = diff(Ue(:, 2:end-1),2,1)/dx^2 + ...
+            diff(Ue(2:end-1, :),2,2)/dy^2;
+   viscv = diff(Ve(:, 2:end-1),2,1)/dx^2 + ...
+            diff(Ve(2:end-1, :),2,2)/dy^2;
+   
+   % buoyancy term
+   fy = Ra*Pr*avg(T,2); % need it on the v mesh!!!
+         
+   % compose final nonlinear term + explicit viscous terms
+   U = U + dt/Re*viscu - dt*(dU2dx + dUVdy);
+   V = V + dt/Re*viscv - dt*(dUVdx + dV2dy) + dt*fy;
+   
+   % pressure correction, Dirichlet P=0 at (1,1)
+   rhs = (diff([uW; U; uE;])/dx + diff([vS' V vN'],1,2)/dy)/dt;
+   rhs = reshape(rhs,Nx*Ny,1);
+   rhs(1) = 0; % reference P
+   %P = Lp\rhs;
+   % alternatively, you can use the pre-computed LU decompositon
+   % P = ...;
+   % or gmres
+   tol = 1e-4;
+   maxit = 1e2;
+   [P,~] = gmres(Lp, rhs, [], tol, maxit);
+   % or as another alternative you can use GS / SOR from homework 6
+	% [PP, r] = GS_SOR(omega, Nx, Ny, hx, hy, L, f, p0, tol, maxit);
+   P = reshape(P,Nx,Ny);
+   
+   % apply pressure correction
+   U = U - dt*diff(P, 1, 1)/dx;
+   V = V - dt*diff(P, 1, 2)/dy;
+   
+   % Temperature equation
+   % I moved the Te part higher 
+   Tu = 1/dx*diff(Ue(:,2:end-1).*avg(Te(:,2:end-1),1),1,1);
+   Tv = 1/dy*diff(Ve(2:end-1,:).*avg(Te(2:end-1,:),2),1,2);
+   d2Tdx2 = diff(Te(:, 2:end-1),2,1)/dx^2 + ...
+            diff(Te(2:end-1, :),2,2)/dy^2;
+   H = -Tu -Tv +1/Pe*d2Tdx2;
+   T = T + dt*H;
+   
+   %-----------------------------------------
+   % extra bit
+   maxU = max(maxU,max(max(U)));
+   maxV = max(maxV,max(max(V)));
+   
+   tser = [tser k*dt];
+       Tser = [Tser Ue(ceil((Nx+1)/2),ceil((Ny+1)/2))];
+       
+   % progress bar
+   if floor(51*k/Nit)>floor(51*(k-1)/Nit), fprintf('.'), end
+     
+end
+fprintf('\n')
+
+
+
+
+     % compute divergence on cell centres
+
+       div = diff([uW;U;uE])/dx + diff([vS' V vN'],1,2)/dy;
+
+       fig1 = figure(1);clf; hold on;
+       contourf(avg(x,2),avg(y,2),div');colorbar
+       axis equal; axis([0 Lx 0 Ly]);
+       title(sprintf('divergence at t=%g',k*dt))
+       drawnow
+
+     
+     % compute velocity on cell corners
+     Ua = avg(Ue, 2);
+     Va = avg(Ve, 1);
+     Len = sqrt(Ua.^2+Va.^2+eps);
+
+     fig2 = figure(2);clf;hold on;
+     %contourf(avg(x,2),avg(y,2),P');colorbar
+     contourf(x,y,sqrt(Ua.^2+Va.^2)',20,'k-');colorbar
+     quiver(x,y,(Ua./Len)',(Va./Len)',.4,'k-')
+     axis equal; axis([0 Lx 0 Ly]);
+     title(sprintf('u at t=%g',k*dt))
+     drawnow
+     
+     % compute temperature on cell corners
+     Te = [T(1,:); T; T(end,:)]; % dT/dx = 0
+     Te = [2*[TS(1) TS TS(end)]' - Te(:,1), Te, 2*[TN(1) TN TN(end)]' - Te(:,end)];
+     Ta = avg(Te,1);
+     Ta = avg(Ta,2);
+     
+     fig3 = figure(3); clf; hold on;
+     contourf(x,y,Ta',20,'k-');colorbar
+     quiver(x,y,(Ua./Len)',(Va./Len)',.4,'k-')
+     axis equal; axis([0 Lx 0 Ly]);
+     title(sprintf('T at t=%g',k*dt))
+     drawnow
+     
+       fig4 = figure(4); hold on;
+
+       plot(tser,abs(Tser))
+       title(sprintf('Probe signal at x=%g, y=%g',...
+             x(ceil((Nx+1)/2)),y(ceil((Ny+1)/2))))
+       set(gca,'yscale','log')
+       xlabel('time t');ylabel('u(t)')
+   
+
+centerU = U(round(Nx/2),:);
+centerV = V(round(Nx/2),:);
+centerT = T(round(Nx/2),:);
+
+saveas(fig1,[param.caseName,'_Divergence.fig']);
+saveas(fig2,[param.caseName,'_Velocity.fig']);
+saveas(fig3,[param.caseName,'_Temp.fig']);
+saveas(fig4,[param.caseName,'_TimeHistory.fig']);
