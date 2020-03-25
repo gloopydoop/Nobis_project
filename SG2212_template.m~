@@ -7,6 +7,7 @@
 % Code version: 
 % 20180222
 function [maxU,maxV,tser,Tser,centerU,centerV,centerT] = SG2212_template(param)
+close all
 %------------------------------------------
 
   % My little extra bits
@@ -31,7 +32,8 @@ function [maxU,maxV,tser,Tser,centerU,centerV,centerT] = SG2212_template(param)
   % Boundary and initial conditions:
   Utop = param.Utop; 
   Ubottom = param.Ubottom;
-  Tbottom = param.Tbottom; Ttop = param.Ttop;
+  Tbottom = param.Tbottom; 
+  Ttop = param.Ttop;
   namp = param.namp;
 
 
@@ -56,7 +58,9 @@ TN = avg(x,2)*0 + Ttop;   TS = avg(x,2)*0 + Tbottom;
 % Initial conditions
 U = zeros(Nx-1, Ny); V = zeros(Nx, Ny-1);
 % linear profile for T with random noise
-T = repmat(linspace(Tbottom,Ttop,Ny),Nx,1) + namp*rand(Nx,Ny); % I have my T on p mesh
+T_1D = linspace(Tbottom,Ttop,Ny+1);
+T_1D = avg(T_1D,2);
+T = repmat(T_1D,Nx,1) + namp*rand(Nx,Ny); % I have my T on p mesh
 % Time series
 tser = [];
 Tser = [];
@@ -90,7 +94,7 @@ for k = 1:Nit
    Ve = [vS' V vN'];
    Ve = [2*vW-Ve(1,:); Ve; 2*vE-Ve(end,:)];    
    Te = [T(1,:); T; T(end,:)]; % dT/dx = 0
-   Te = [2*[TS(1) TS TS(end)]' - Te(:,1), Te, 2*[TN(1) TN TN(end)]' - Te(:,end)];
+   Te = [2*Tbottom - Te(:,1), Te, 2*Ttop - Te(:,end)];
    
    % averaged (Ua,Va) of u and v on corners
    Ua = avg(Ue, 2);
@@ -149,18 +153,63 @@ for k = 1:Nit
    maxU = max(maxU,max(max(U)));
    maxV = max(maxV,max(max(V)));
    
-   
+   tser = [tser k*dt];
+   Tser = [Tser Ue(ceil((Nx+1)/2),ceil((Ny+1)/2))];
+       
    % progress bar
    if floor(51*k/Nit)>floor(51*(k-1)/Nit), fprintf('.'), end
-   
-   
-     end
-   end
+     
 end
 fprintf('\n')
 
 
 
+
+     % compute divergence on cell centres
+
+       div = diff([uW;U;uE])/dx + diff([vS' V vN'],1,2)/dy;
+
+       fig1 = figure(1);clf; hold on;
+       contourf(avg(x,2),avg(y,2),div');colorbar
+       axis equal; axis([0 Lx 0 Ly]);
+       title(sprintf('divergence at t=%g',k*dt))
+       drawnow
+
+     
+     % compute velocity on cell corners
+     Ua = avg(Ue, 2);
+     Va = avg(Ve, 1);
+     Len = sqrt(Ua.^2+Va.^2+eps);
+
+     fig2 = figure(2);clf;hold on;
+     %contourf(avg(x,2),avg(y,2),P');colorbar
+     contourf(x,y,sqrt(Ua.^2+Va.^2)',20,'k-');colorbar
+     quiver(x,y,(Ua./Len)',(Va./Len)',.4,'k-')
+     axis equal; axis([0 Lx 0 Ly]);
+     title(sprintf('u at t=%g',k*dt))
+     drawnow
+     
+     % compute temperature on cell corners
+     Te = [T(1,:); T; T(end,:)]; % dT/dx = 0
+     Te = [2*Tbottom - Te(:,1), Te, 2*Ttop - Te(:,end)];
+     Ta = avg(Te,1);
+     Ta = avg(Ta,2);
+     
+     fig3 = figure(3); clf; hold on;
+     contourf(x,y,Ta',20,'k-');colorbar
+     quiver(x,y,(Ua./Len)',(Va./Len)',.4,'k-')
+     axis equal; axis([0 Lx 0 Ly]);
+     title(sprintf('T at t=%g',k*dt))
+     drawnow
+     
+       fig4 = figure(4); hold on;
+
+       plot(tser,abs(Tser))
+       title(sprintf('Probe signal at x=%g, y=%g',...
+             x(ceil((Nx+1)/2)),y(ceil((Ny+1)/2))))
+       set(gca,'yscale','log')
+       xlabel('time t');ylabel('u(t)')
+   
 
 centerU = U(round(Nx/2),:);
 centerV = V(round(Nx/2),:);

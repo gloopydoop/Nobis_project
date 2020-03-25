@@ -32,7 +32,8 @@ close all
   % Boundary and initial conditions:
   Utop = param.Utop; 
   Ubottom = param.Ubottom;
-  Tbottom = param.Tbottom; Ttop = param.Ttop;
+  Tbottom = param.Tbottom; 
+  Ttop = param.Ttop;
   namp = param.namp;
 
 
@@ -57,7 +58,9 @@ TN = avg(x,2)*0 + Ttop;   TS = avg(x,2)*0 + Tbottom;
 % Initial conditions
 U = zeros(Nx-1, Ny); V = zeros(Nx, Ny-1);
 % linear profile for T with random noise
-T = repmat(linspace(Tbottom,Ttop,Ny),Nx,1) + namp*rand(Nx,Ny); % I have my T on p mesh
+T_1D = linspace(Tbottom,Ttop,Ny+1);
+T_1D = avg(T_1D,2);
+T = repmat(T_1D,Nx,1) + namp*rand(Nx,Ny); % I have my T on p mesh
 % Time series
 tser = [];
 Tser = [];
@@ -91,7 +94,7 @@ for k = 1:Nit
    Ve = [vS' V vN'];
    Ve = [2*vW-Ve(1,:); Ve; 2*vE-Ve(end,:)];    
    Te = [T(1,:); T; T(end,:)]; % dT/dx = 0
-   Te = [2*[TS(1) TS TS(end)]' - Te(:,1), Te, 2*[TN(1) TN TN(end)]' - Te(:,end)];
+   Te = [2*Tbottom - Te(:,1), Te, 2*Ttop - Te(:,end)];
    
    % averaged (Ua,Va) of u and v on corners
    Ua = avg(Ue, 2);
@@ -126,8 +129,9 @@ for k = 1:Nit
    % P = ...;
    % or gmres
    tol = 1e-4;
-   maxit = 1e2;
-   [P,~] = gmres(Lp, rhs, [], tol, maxit);
+   maxit = 1e4;
+   %[P,~] = gmres(Lp, rhs, [], tol, maxit);
+   P = ULp\(LLp\rhs);
    % or as another alternative you can use GS / SOR from homework 6
 	% [PP, r] = GS_SOR(omega, Nx, Ny, hx, hy, L, f, p0, tol, maxit);
    P = reshape(P,Nx,Ny);
@@ -151,7 +155,7 @@ for k = 1:Nit
    maxV = max(maxV,max(max(V)));
    
    tser = [tser k*dt];
-       Tser = [Tser Ue(ceil((Nx+1)/2),ceil((Ny+1)/2))];
+   Tser = [Tser Ue(ceil((Nx+1)/2),ceil((Ny+1)/2))];
        
    % progress bar
    if floor(51*k/Nit)>floor(51*(k-1)/Nit), fprintf('.'), end
@@ -188,7 +192,7 @@ fprintf('\n')
      
      % compute temperature on cell corners
      Te = [T(1,:); T; T(end,:)]; % dT/dx = 0
-     Te = [2*[TS(1) TS TS(end)]' - Te(:,1), Te, 2*[TN(1) TN TN(end)]' - Te(:,end)];
+     Te = [2*Tbottom - Te(:,1), Te, 2*Ttop - Te(:,end)];
      Ta = avg(Te,1);
      Ta = avg(Ta,2);
      

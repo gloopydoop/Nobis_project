@@ -18,31 +18,32 @@ param.Ubottom = 0.;
 param.Tbottom = 1.; param.Ttop = 0.;
 param.namp = 0.1;
 
-% case A
-param.caseName = 'Part1_Case_A';
-param.Re = 20;      % Reynolds number
-param.dt = 0.001;      % time step
-param.Tf = 1;       % final time
-param.Nx = 30;      % number of cells in x
-param.Ny = 30;      % number of cells in y
-[P1_CA.maxU,P1_CA.maxV,P1_CA.tser,P1_CA.Tser,P1_CA.centerU,P1_CA.centerV,P1_CA.centerT] = SG2212_template(param);
-
-% case B
-param.caseName = 'Part1_Case_B';
-param.Re = 200;      % Reynolds number
-param.dt = 0.001;      % time step
-param.Tf = 1;       % final time
-param.Nx = 50;      % number of cells in x
-param.Ny = 50;      % number of cells in y
-[P1_CB.maxU,P1_CB.maxV,P1_CB.tser,P1_CB.Tser,P1_CB.centerU,P1_CB.centerV,P1_CB.centerT] = SG2212_template(param);
+% % case A
+% param.caseName = 'Part1_Case_A';
+% param.Re = 20;      % Reynolds number
+% param.dt = 0.001;      % time step
+% param.Tf = 50;       % final time
+% param.Nx = 30;      % number of cells in x
+% param.Ny = 30;      % number of cells in y
+% [P1_CA.maxU,P1_CA.maxV,P1_CA.tser,P1_CA.Tser,P1_CA.centerU,P1_CA.centerV,P1_CA.centerT] = SG2212_template(param);
+% 
+% % case B
+% param.caseName = 'Part1_Case_B';
+% param.Re = 200;      % Reynolds number
+% param.dt = 0.001;      % time step
+% param.Tf = 50;       % final time
+% param.Nx = 50;      % number of cells in x
+% param.Ny = 50;      % number of cells in y
+% [P1_CB.maxU,P1_CB.maxV,P1_CB.tser,P1_CB.Tser,P1_CB.centerU,P1_CB.centerV,P1_CB.centerT] = SG2212_template(param);
 
 % case C
 param.caseName = 'Part1_Case_C';
 param.Re = 4000;      % Reynolds number
 param.dt = 0.001;      % time step
-param.Tf = 1;       % final time
+param.Tf = 50;       % final time
 param.Nx = 100;      % number of cells in x
 param.Ny = 100;      % number of cells in y
+load('Case1.mat')
 [P1_CC.maxU,P1_CC.maxV,P1_CC.tser,P1_CC.Tser,P1_CC.centerU,P1_CC.centerV,P1_CC.centerT] = SG2212_template(param);
 
 save('Case1.mat','P1_CA','P1_CB','P1_CC')
