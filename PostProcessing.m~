@@ -1,0 +1,6 @@
+close all
+clear all
+clc
+
+
+fig = openfig('Part1_Case_A_Velocity.fig')
