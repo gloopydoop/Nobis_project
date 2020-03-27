@@ -104,7 +104,14 @@ param.Pe = param.Re*param.Pr; %Peclet number
 % 
 % [P2_CB4.maxU,P2_CB4.maxV,P2_CB4.tser,P2_CB4.Tser,P2_CB4.centerU,P2_CB4.centerV,P2_CB4.centerT] = SG2212_template(param);
 
+% 4)
+param.caseName = 'Part2_Case_B4';
+param.Ra = 1708;      % Rayleigh number     
+param.Re = 1./param.Pr;    % Reynolds number
+param.Ri = param.Ra*param.Pr;    % Richardson number
+param.Pe = param.Re*param.Pr; %Peclet number
 
+[P2_CB5.maxU,P2_CB5.maxV,P2_CB5.tser,P2_CB5.Tser,P2_CB5.centerU,P2_CB5.centerV,P2_CB5.centerT] = SG2212_template(param);
 
-save('Case2B.mat','P2_CB1','P2_CB2','P2_CB3')
+%save('Case2B.mat','P2_CB1','P2_CB2','P2_CB3')
 
