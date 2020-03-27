@@ -10,7 +10,7 @@ param.dt = 0.01;   % time step
 param.Tf = 1;       % final time
 param.Lx = 10.;      % width of box
 param.Ly = 1;        % height of box
-param.Ny = 10;      % number of cells in y
+param.Ny = 20;      % number of cells in y
 param.Nx = round(param.Lx/param.Ly*param.Ny);      % number of cells in x
 
 param.ig = 9999999;      % number of iterations between output
@@ -59,33 +59,50 @@ param.Tf = 10;       % final time
 param.Tbottom = 1.; 
 param.Ttop = 0.;
 param.Tf = 20;       % final time
-param.dt = 0.0001;      % time step
+param.dt = 0.0005;      % time step
 
 % 1)
-param.caseName = 'Part2_Case_B1';
+param.caseName = 'Part2_Case_B0';
 
-param.Ra = 1710;      % Rayleigh number     
+param.Ra = 1709;      % Rayleigh number     
 param.Re = 1./param.Pr;    % Reynolds number
 param.Ri = param.Ra*param.Pr;    % Richardson number
 param.Pe = param.Re*param.Pr; %Peclet number
+[P2_CB0.maxU,P2_CB0.maxV,P2_CB0.tser,P2_CB0.Tser,P2_CB0.centerU,P2_CB0.centerV,P2_CB0.centerT] = SG2212_template(param);
+% % 1)
+% param.caseName = 'Part2_Case_B1';
+% 
+% param.Ra = 1710;      % Rayleigh number     
+% param.Re = 1./param.Pr;    % Reynolds number
+% param.Ri = param.Ra*param.Pr;    % Richardson number
+% param.Pe = param.Re*param.Pr; %Peclet number
+% 
+% [P2_CB1.maxU,P2_CB1.maxV,P2_CB1.tser,P2_CB1.Tser,P2_CB1.centerU,P2_CB1.centerV,P2_CB1.centerT] = SG2212_template(param);
+% % 2)
+% param.caseName = 'Part2_Case_B2';
+% param.Ra = 1711;      % Rayleigh number     
+% param.Re = 1./param.Pr;    % Reynolds number
+% param.Ri = param.Ra*param.Pr;    % Richardson number
+% param.Pe = param.Re*param.Pr; %Peclet number
+% 
+% [P2_CB2.maxU,P2_CB2.maxV,P2_CB2.tser,P2_CB2.Tser,P2_CB2.centerU,P2_CB2.centerV,P2_CB2.centerT] = SG2212_template(param);
+% % 3)
+% param.caseName = 'Part2_Case_B3';
+% param.Ra = 1715;      % Rayleigh number     
+% param.Re = 1./param.Pr;    % Reynolds number
+% param.Ri = param.Ra*param.Pr;    % Richardson number
+% param.Pe = param.Re*param.Pr; %Peclet number
+% 
+% [P2_CB3.maxU,P2_CB3.maxV,P2_CB3.tser,P2_CB3.Tser,P2_CB3.centerU,P2_CB3.centerV,P2_CB3.centerT] = SG2212_template(param);
 
-[P2_CB1.maxU,P2_CB1.maxV,P2_CB1.tser,P2_CB1.Tser,P2_CB1.centerU,P2_CB1.centerV,P2_CB1.centerT] = SG2212_template(param);
-% 2)
-param.caseName = 'Part2_Case_B2';
-param.Ra = 1711;      % Rayleigh number     
-param.Re = 1./param.Pr;    % Reynolds number
-param.Ri = param.Ra*param.Pr;    % Richardson number
-param.Pe = param.Re*param.Pr; %Peclet number
-
-[P2_CB2.maxU,P2_CB2.maxV,P2_CB2.tser,P2_CB2.Tser,P2_CB2.centerU,P2_CB2.centerV,P2_CB2.centerT] = SG2212_template(param);
-% 3)
-param.caseName = 'Part2_Case_B3';
-param.Ra = 1715;      % Rayleigh number     
-param.Re = 1./param.Pr;    % Reynolds number
-param.Ri = param.Ra*param.Pr;    % Richardson number
-param.Pe = param.Re*param.Pr; %Peclet number
-
-[P2_CB3.maxU,P2_CB3.maxV,P2_CB3.tser,P2_CB3.Tser,P2_CB3.centerU,P2_CB3.centerV,P2_CB3.centerT] = SG2212_template(param);
+% % 4)
+% param.caseName = 'Part2_Case_B4';
+% param.Ra = 5000;      % Rayleigh number     
+% param.Re = 1./param.Pr;    % Reynolds number
+% param.Ri = param.Ra*param.Pr;    % Richardson number
+% param.Pe = param.Re*param.Pr; %Peclet number
+% 
+% [P2_CB4.maxU,P2_CB4.maxV,P2_CB4.tser,P2_CB4.Tser,P2_CB4.centerU,P2_CB4.centerV,P2_CB4.centerT] = SG2212_template(param);
 
 
 
