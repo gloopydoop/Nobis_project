@@ -18,7 +18,7 @@ param.Ubottom = 0.;
 param.Tbottom = 1.; param.Ttop = 0.;
 param.namp = 0.1;
 
-load('Case1.mat')
+
 % case A
 param.caseName = 'Part1_Case_A';
 param.Re = 20;      % Reynolds number
@@ -44,7 +44,6 @@ param.dt = 0.001;      % time step
 param.Tf = 50;       % final time
 param.Nx = 100;      % number of cells in x
 param.Ny = 100;      % number of cells in y
-load('Case1.mat')
 [P1_CC.maxU,P1_CC.maxV,P1_CC.tser,P1_CC.Tser,P1_CC.centerU,P1_CC.centerV,P1_CC.centerT] = SG2212_template(param);
 
 save('Case1.mat','P1_CA','P1_CB','P1_CC')
