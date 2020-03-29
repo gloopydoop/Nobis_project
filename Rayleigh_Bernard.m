@@ -24,7 +24,7 @@ param.Ubottom = 0.;
 param.namp = 0.1;
 param.Tbottom = 0.; 
 param.Ttop = 1.;
-param.Tf = 10;       % final time
+param.Tf = 20;       % final time
 % 1)
 param.caseName = 'Part2_Case_A1';
 param.dt = 0.0005;      % time step
