@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.27)  25 MAR 2020 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.27)  30 MAR 2020 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,35 +503,41 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count109
 \c@subtable=\count110
 )
-(./Nobis_project.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count111
+\float@exts=\toks22
+\float@box=\box54
+\@float@everytoks=\toks23
+\@floatcapt=\box55
+) (./Nobis_project.aux)
 \openout1 = `Nobis_project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
+\scratchcounter=\count112
 \scratchdimen=\dimen130
-\scratchbox=\box54
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count114
+\scratchbox=\box56
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count115
 \MPscratchDim=\dimen131
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -589,84 +595,666 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<Part1_Case_A_Velocity.pdf, id=1, 614.295pt x 794.97pt>
-File: Part1_Case_A_Velocity.pdf Graphic file (type pdf)
-<use Part1_Case_A_Velocity.pdf>
-Package pdftex.def Info: Part1_Case_A_Velocity.pdf  used on input line 20.
-(pdftex.def)             Requested size: 155.24895pt x 200.91333pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-File: Part1_Case_A_Velocity.pdf Graphic file (type pdf)
-<use Part1_Case_A_Velocity.pdf>
-Package pdftex.def Info: Part1_Case_A_Velocity.pdf  used on input line 24.
-(pdftex.def)             Requested size: 155.24895pt x 200.91333pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+Package epstopdf Info: Source file: <Part1_Case_A_Velocity.eps>
+(epstopdf)                    date: 2020-03-28 18:10:01
+(epstopdf)                    size: 375993 bytes
+(epstopdf)             Output file: <Part1_Case_A_Velocity-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2020-03-28 18:11:10
+(epstopdf)                    size: 61928 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part1_Case_A_Velocity-eps-
+converted-to.pdf Part1_Case_A_Velocity.eps>
+(epstopdf)             \includegraphics on input line 39.
+Package epstopdf Info: Output file is already uptodate.
 
- <./Part1_Case_A_Velocity.pdf>]
-<Q1.jpg, id=16, 3083.52pt x 4111.36pt>
+
+pdfTeX warning: pdflatex (file ./Part1_Case_A_Velocity-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part1_Case_A_Velocity-eps-converted-to.pdf, id=1, 255.95625pt x 212.795pt>
+File: Part1_Case_A_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part1_Case_A_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part1_Case_A_Velocity-eps-converted-to.pdf  used on in
+put line 39.
+(pdftex.def)             Requested size: 155.24895pt x 129.07092pt.
+Package epstopdf Info: Source file: <Part1_Case_A_Temp.eps>
+(epstopdf)                    date: 2020-03-28 18:10:02
+(epstopdf)                    size: 298476 bytes
+(epstopdf)             Output file: <Part1_Case_A_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-28 18:11:10
+(epstopdf)                    size: 53070 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part1_Case_A_Temp-eps-conv
+erted-to.pdf Part1_Case_A_Temp.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part1_Case_A_Temp-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part1_Case_A_Temp-eps-converted-to.pdf, id=2, 255.95625pt x 212.795pt>
+File: Part1_Case_A_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part1_Case_A_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part1_Case_A_Temp-eps-converted-to.pdf  used on input 
+line 43.
+(pdftex.def)             Requested size: 155.24895pt x 129.07092pt.
+Package epstopdf Info: Source file: <Part1_Case_B_Velocity.eps>
+(epstopdf)                    date: 2020-03-28 13:42:06
+(epstopdf)                    size: 872747 bytes
+(epstopdf)             Output file: <Part1_Case_B_Velocity-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2020-03-28 16:45:52
+(epstopdf)                    size: 138056 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part1_Case_B_Velocity-eps-
+converted-to.pdf Part1_Case_B_Velocity.eps>
+(epstopdf)             \includegraphics on input line 57.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part1_Case_B_Velocity-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part1_Case_B_Velocity-eps-converted-to.pdf, id=3, 255.95625pt x 212.795pt>
+File: Part1_Case_B_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part1_Case_B_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part1_Case_B_Velocity-eps-converted-to.pdf  used on in
+put line 57.
+(pdftex.def)             Requested size: 155.24895pt x 129.07092pt.
+Package epstopdf Info: Source file: <Part1_Case_B_Temp.eps>
+(epstopdf)                    date: 2020-03-28 13:42:08
+(epstopdf)                    size: 760894 bytes
+(epstopdf)             Output file: <Part1_Case_B_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-28 16:45:53
+(epstopdf)                    size: 124816 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part1_Case_B_Temp-eps-conv
+erted-to.pdf Part1_Case_B_Temp.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part1_Case_B_Temp-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part1_Case_B_Temp-eps-converted-to.pdf, id=4, 255.95625pt x 212.795pt>
+File: Part1_Case_B_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part1_Case_B_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part1_Case_B_Temp-eps-converted-to.pdf  used on input 
+line 61.
+(pdftex.def)             Requested size: 155.24895pt x 129.07092pt.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Part1_Case_A_Velocity-ep
+s-converted-to.pdf> <./Part1_Case_A_Temp-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Part1_Case_C_Velocity.eps>
+(epstopdf)                    date: 2020-03-28 13:42:13
+(epstopdf)                    size: 3088480 bytes
+(epstopdf)             Output file: <Part1_Case_C_Velocity-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2020-03-28 16:45:56
+(epstopdf)                    size: 467230 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part1_Case_C_Velocity-eps-
+converted-to.pdf Part1_Case_C_Velocity.eps>
+(epstopdf)             \includegraphics on input line 75.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part1_Case_C_Velocity-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part1_Case_C_Velocity-eps-converted-to.pdf, id=32, 255.95625pt x 212.795pt>
+File: Part1_Case_C_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part1_Case_C_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part1_Case_C_Velocity-eps-converted-to.pdf  used on in
+put line 75.
+(pdftex.def)             Requested size: 155.24895pt x 129.07092pt.
+Package epstopdf Info: Source file: <Part1_Case_C_Temp.eps>
+(epstopdf)                    date: 2020-03-28 13:42:16
+(epstopdf)                    size: 2807901 bytes
+(epstopdf)             Output file: <Part1_Case_C_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-28 16:45:59
+(epstopdf)                    size: 421326 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part1_Case_C_Temp-eps-conv
+erted-to.pdf Part1_Case_C_Temp.eps>
+(epstopdf)             \includegraphics on input line 79.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part1_Case_C_Temp-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part1_Case_C_Temp-eps-converted-to.pdf, id=33, 255.95625pt x 212.795pt>
+File: Part1_Case_C_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part1_Case_C_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part1_Case_C_Temp-eps-converted-to.pdf  used on input 
+line 79.
+(pdftex.def)             Requested size: 155.24895pt x 129.07092pt.
+[2 <./Part1_Case_B_Velocity-eps-converted-to.pdf> <./Part1_Case_B_Temp-eps-conv
+erted-to.pdf> <./Part1_Case_C_Velocity-eps-converted-to.pdf> <./Part1_Case_C_Te
+mp-eps-converted-to.pdf>]
+<Q1.jpg, id=73, 3083.52pt x 4111.36pt>
 File: Q1.jpg Graphic file (type jpg)
 <use Q1.jpg>
-Package pdftex.def Info: Q1.jpg  used on input line 36.
+Package pdftex.def Info: Q1.jpg  used on input line 92.
 (pdftex.def)             Requested size: 345.0pt x 459.96732pt.
- [2 <./Q1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+ [3 <./Q1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
 
-Overfull \hbox (14.85097pt too wide) in paragraph at lines 109--110
+Overfull \hbox (14.85097pt too wide) in paragraph at lines 165--166
 []\OT1/cmr/m/n/10 In the case that $\OML/cmm/m/it/10 Pr \OT1/cmr/m/n/10 = 0\OML
 /cmm/m/it/10 :\OT1/cmr/m/n/10 71 \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 1$ then in 
 the vis-cous limit (equa-tion (8[]))$^^A\OML/cmm/m/it/10 t[] <
  []
 
-[3]
-<Q3A.jpg, id=28, 3083.52pt x 4111.36pt>
+[4]
+<Q3A.jpg, id=83, 3083.52pt x 4111.36pt>
 File: Q3A.jpg Graphic file (type jpg)
 <use Q3A.jpg>
-Package pdftex.def Info: Q3A.jpg  used on input line 117.
+Package pdftex.def Info: Q3A.jpg  used on input line 173.
 (pdftex.def)             Requested size: 345.0pt x 459.96732pt.
- [4 <./Q3A.jpg>]
-<Q3B.jpg, id=32, 3083.52pt x 4111.36pt>
+<Q3B.jpg, id=84, 3059.43pt x 1094.0875pt>
 File: Q3B.jpg Graphic file (type jpg)
 <use Q3B.jpg>
-Package pdftex.def Info: Q3B.jpg  used on input line 119.
-(pdftex.def)             Requested size: 345.0pt x 459.96732pt.
- [5 <./Q3B.jpg>] [6] (./Nobis_project.aux) ) 
+Package pdftex.def Info: Q3B.jpg  used on input line 174.
+(pdftex.def)             Requested size: 345.0pt x 123.37167pt.
+
+Overfull \vbox (6.13062pt too high) has occurred while \output is active []
+
+
+[5 <./Q3A.jpg> <./Q3B.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+Package epstopdf Info: Source file: <Probe_history.eps>
+(epstopdf)                    date: 2020-03-30 09:58:50
+(epstopdf)                    size: 263194 bytes
+(epstopdf)             Output file: <Probe_history-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-30 10:23:29
+(epstopdf)                    size: 50878 bytes
+(epstopdf)             Command: <repstopdf --outfile=Probe_history-eps-converte
+d-to.pdf Probe_history.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Probe_history-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Probe_history-eps-converted-to.pdf, id=88, 335.2525pt x 106.3975pt>
+File: Probe_history-eps-converted-to.pdf Graphic file (type pdf)
+<use Probe_history-eps-converted-to.pdf>
+Package pdftex.def Info: Probe_history-eps-converted-to.pdf  used on input line
+ 191.
+(pdftex.def)             Requested size: 335.25168pt x 106.39723pt.
+<OpenFOAM.png, id=89, 1051.93pt x 807.015pt>
+File: OpenFOAM.png Graphic file (type png)
+<use OpenFOAM.png>
+Package pdftex.def Info: OpenFOAM.png  used on input line 209.
+(pdftex.def)             Requested size: 310.4979pt x 238.20282pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <Ucenter.eps>
+(epstopdf)                    date: 2020-03-30 09:58:53
+(epstopdf)                    size: 116387 bytes
+(epstopdf)             Output file: <Ucenter-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-30 10:23:29
+(epstopdf)                    size: 15592 bytes
+(epstopdf)             Command: <repstopdf --outfile=Ucenter-eps-converted-to.p
+df Ucenter.eps>
+(epstopdf)             \includegraphics on input line 223.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Ucenter-eps-converted-to.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<Ucenter-eps-converted-to.pdf, id=90, 178.6675pt x 220.825pt>
+File: Ucenter-eps-converted-to.pdf Graphic file (type pdf)
+<use Ucenter-eps-converted-to.pdf>
+Package pdftex.def Info: Ucenter-eps-converted-to.pdf  used on input line 223.
+(pdftex.def)             Requested size: 155.24895pt x 191.89043pt.
+Package epstopdf Info: Source file: <Vcenter.eps>
+(epstopdf)                    date: 2020-03-30 09:58:54
+(epstopdf)                    size: 116321 bytes
+(epstopdf)             Output file: <Vcenter-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-30 10:23:30
+(epstopdf)                    size: 15004 bytes
+(epstopdf)             Command: <repstopdf --outfile=Vcenter-eps-converted-to.p
+df Vcenter.eps>
+(epstopdf)             \includegraphics on input line 227.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Vcenter-eps-converted-to.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<Vcenter-eps-converted-to.pdf, id=91, 176.66pt x 220.825pt>
+File: Vcenter-eps-converted-to.pdf Graphic file (type pdf)
+<use Vcenter-eps-converted-to.pdf>
+Package pdftex.def Info: Vcenter-eps-converted-to.pdf  used on input line 227.
+(pdftex.def)             Requested size: 155.24895pt x 194.06377pt.
+[6 <./Probe_history-eps-converted-to.pdf>] [7 <./OpenFOAM.png (PNG copy)> <./Uc
+enter-eps-converted-to.pdf> <./Vcenter-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Part2_Case_A1_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:27:48
+(epstopdf)                    size: 1050808 bytes
+(epstopdf)             Output file: <Part2_Case_A1_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:05:42
+(epstopdf)                    size: 113011 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_A1_Velocity-eps
+-converted-to.pdf Part2_Case_A1_Velocity.eps>
+(epstopdf)             \includegraphics on input line 262.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_A1_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_A1_Velocity-eps-converted-to.pdf, id=115, 557.08125pt x 77.28876pt>
+
+File: Part2_Case_A1_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_A1_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_A1_Velocity-eps-converted-to.pdf  used on i
+nput line 262.
+(pdftex.def)             Requested size: 345.0pt x 47.86545pt.
+Package epstopdf Info: Source file: <Part2_Case_A1_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:27:50
+(epstopdf)                    size: 1112777 bytes
+(epstopdf)             Output file: <Part2_Case_A1_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:05:43
+(epstopdf)                    size: 96174 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_A1_Temp-eps-con
+verted-to.pdf Part2_Case_A1_Temp.eps>
+(epstopdf)             \includegraphics on input line 263.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_A1_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_A1_Temp-eps-converted-to.pdf, id=116, 545.03625pt x 75.28125pt>
+File: Part2_Case_A1_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_A1_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_A1_Temp-eps-converted-to.pdf  used on input
+ line 263.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+Package epstopdf Info: Source file: <Part2_Case_A2_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:27:51
+(epstopdf)                    size: 1055219 bytes
+(epstopdf)             Output file: <Part2_Case_A2_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:05:44
+(epstopdf)                    size: 115116 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_A2_Velocity-eps
+-converted-to.pdf Part2_Case_A2_Velocity.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_A2_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_A2_Velocity-eps-converted-to.pdf, id=117, 557.08125pt x 77.28876pt>
+
+File: Part2_Case_A2_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_A2_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_A2_Velocity-eps-converted-to.pdf  used on i
+nput line 264.
+(pdftex.def)             Requested size: 345.0pt x 47.86545pt.
+Package epstopdf Info: Source file: <Part2_Case_A2_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:27:53
+(epstopdf)                    size: 1113040 bytes
+(epstopdf)             Output file: <Part2_Case_A2_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:05:45
+(epstopdf)                    size: 97873 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_A2_Temp-eps-con
+verted-to.pdf Part2_Case_A2_Temp.eps>
+(epstopdf)             \includegraphics on input line 265.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_A2_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_A2_Temp-eps-converted-to.pdf, id=118, 545.03625pt x 75.28125pt>
+File: Part2_Case_A2_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_A2_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_A2_Temp-eps-converted-to.pdf  used on input
+ line 265.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+Package epstopdf Info: Source file: <Part2_Case_A3_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:27:55
+(epstopdf)                    size: 1087222 bytes
+(epstopdf)             Output file: <Part2_Case_A3_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:05:46
+(epstopdf)                    size: 131896 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_A3_Velocity-eps
+-converted-to.pdf Part2_Case_A3_Velocity.eps>
+(epstopdf)             \includegraphics on input line 266.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_A3_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_A3_Velocity-eps-converted-to.pdf, id=119, 557.08125pt x 76.285pt>
+File: Part2_Case_A3_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_A3_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_A3_Velocity-eps-converted-to.pdf  used on i
+nput line 266.
+(pdftex.def)             Requested size: 345.0pt x 47.24382pt.
+Package epstopdf Info: Source file: <Part2_Case_A3_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:27:56
+(epstopdf)                    size: 1113368 bytes
+(epstopdf)             Output file: <Part2_Case_A3_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:05:47
+(epstopdf)                    size: 103603 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_A3_Temp-eps-con
+verted-to.pdf Part2_Case_A3_Temp.eps>
+(epstopdf)             \includegraphics on input line 267.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_A3_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_A3_Temp-eps-converted-to.pdf, id=120, 545.03625pt x 75.28125pt>
+File: Part2_Case_A3_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_A3_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_A3_Temp-eps-converted-to.pdf  used on input
+ line 267.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+Package epstopdf Info: Source file: <Probe_history2A.eps>
+(epstopdf)                    date: 2020-03-30 09:58:52
+(epstopdf)                    size: 451909 bytes
+(epstopdf)             Output file: <Probe_history2A-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-30 10:23:30
+(epstopdf)                    size: 97511 bytes
+(epstopdf)             Command: <repstopdf --outfile=Probe_history2A-eps-conver
+ted-to.pdf Probe_history2A.eps>
+(epstopdf)             \includegraphics on input line 276.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Probe_history2A-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Probe_history2A-eps-converted-to.pdf, id=121, 345.29pt x 107.40125pt>
+File: Probe_history2A-eps-converted-to.pdf Graphic file (type pdf)
+<use Probe_history2A-eps-converted-to.pdf>
+Package pdftex.def Info: Probe_history2A-eps-converted-to.pdf  used on input li
+ne 276.
+(pdftex.def)             Requested size: 345.28914pt x 107.40097pt.
+[8 <./Part2_Case_A1_Velocity-eps-converted-to.pdf> <./Part2_Case_A1_Temp-eps-co
+nverted-to.pdf> <./Part2_Case_A2_Velocity-eps-converted-to.pdf> <./Part2_Case_A
+2_Temp-eps-converted-to.pdf> <./Part2_Case_A3_Velocity-eps-converted-to.pdf> <.
+/Part2_Case_A3_Temp-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:timeseries_1B' on page 9 undefined on input line 
+285.
+
+Package epstopdf Info: Source file: <Part2_Case_B1_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:28:02
+(epstopdf)                    size: 2257905 bytes
+(epstopdf)             Output file: <Part2_Case_B1_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:05:50
+(epstopdf)                    size: 349634 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B1_Velocity-eps
+-converted-to.pdf Part2_Case_B1_Velocity.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B1_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B1_Velocity-eps-converted-to.pdf, id=192, 553.06625pt x 77.28876pt>
+
+File: Part2_Case_B1_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B1_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B1_Velocity-eps-converted-to.pdf  used on i
+nput line 312.
+(pdftex.def)             Requested size: 345.0pt x 48.21217pt.
+Package epstopdf Info: Source file: <Part2_Case_B1_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:28:04
+(epstopdf)                    size: 1112938 bytes
+(epstopdf)             Output file: <Part2_Case_B1_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:05:52
+(epstopdf)                    size: 185324 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B1_Temp-eps-con
+verted-to.pdf Part2_Case_B1_Temp.eps>
+(epstopdf)             \includegraphics on input line 313.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B1_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B1_Temp-eps-converted-to.pdf, id=193, 545.03625pt x 75.28125pt>
+File: Part2_Case_B1_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B1_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B1_Temp-eps-converted-to.pdf  used on input
+ line 313.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+Package epstopdf Info: Source file: <Part2_Case_B2_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:28:06
+(epstopdf)                    size: 2163833 bytes
+(epstopdf)             Output file: <Part2_Case_B2_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:05:54
+(epstopdf)                    size: 343186 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B2_Velocity-eps
+-converted-to.pdf Part2_Case_B2_Velocity.eps>
+(epstopdf)             \includegraphics on input line 314.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B2_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B2_Velocity-eps-converted-to.pdf, id=194, 551.05875pt x 75.28125pt>
+
+File: Part2_Case_B2_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B2_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B2_Velocity-eps-converted-to.pdf  used on i
+nput line 314.
+(pdftex.def)             Requested size: 345.0pt x 47.13336pt.
+Package epstopdf Info: Source file: <Part2_Case_B2_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:28:07
+(epstopdf)                    size: 1113015 bytes
+(epstopdf)             Output file: <Part2_Case_B2_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:05:55
+(epstopdf)                    size: 189341 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B2_Temp-eps-con
+verted-to.pdf Part2_Case_B2_Temp.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B2_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B2_Temp-eps-converted-to.pdf, id=195, 545.03625pt x 75.28125pt>
+File: Part2_Case_B2_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B2_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B2_Temp-eps-converted-to.pdf  used on input
+ line 315.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+Package epstopdf Info: Source file: <Part2_Case_B3_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:28:09
+(epstopdf)                    size: 2135293 bytes
+(epstopdf)             Output file: <Part2_Case_B3_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:05:58
+(epstopdf)                    size: 339041 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B3_Velocity-eps
+-converted-to.pdf Part2_Case_B3_Velocity.eps>
+(epstopdf)             \includegraphics on input line 316.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B3_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B3_Velocity-eps-converted-to.pdf, id=196, 551.05875pt x 75.28125pt>
+
+File: Part2_Case_B3_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B3_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B3_Velocity-eps-converted-to.pdf  used on i
+nput line 316.
+(pdftex.def)             Requested size: 345.0pt x 47.13336pt.
+Package epstopdf Info: Source file: <Part2_Case_B3_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:28:11
+(epstopdf)                    size: 1113089 bytes
+(epstopdf)             Output file: <Part2_Case_B3_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:06:00
+(epstopdf)                    size: 193400 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B3_Temp-eps-con
+verted-to.pdf Part2_Case_B3_Temp.eps>
+(epstopdf)             \includegraphics on input line 317.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B3_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B3_Temp-eps-converted-to.pdf, id=197, 545.03625pt x 75.28125pt>
+File: Part2_Case_B3_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B3_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B3_Temp-eps-converted-to.pdf  used on input
+ line 317.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+Package epstopdf Info: Source file: <Part2_Case_B4_Velocity.eps>
+(epstopdf)                    date: 2020-03-29 12:28:13
+(epstopdf)                    size: 2682819 bytes
+(epstopdf)             Output file: <Part2_Case_B4_Velocity-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2020-03-29 13:06:03
+(epstopdf)                    size: 428894 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B4_Velocity-eps
+-converted-to.pdf Part2_Case_B4_Velocity.eps>
+(epstopdf)             \includegraphics on input line 318.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B4_Velocity-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B4_Velocity-eps-converted-to.pdf, id=198, 542.025pt x 75.28125pt>
+File: Part2_Case_B4_Velocity-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B4_Velocity-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B4_Velocity-eps-converted-to.pdf  used on i
+nput line 318.
+(pdftex.def)             Requested size: 345.0pt x 47.91792pt.
+Package epstopdf Info: Source file: <Part2_Case_B4_Temp.eps>
+(epstopdf)                    date: 2020-03-29 12:28:15
+(epstopdf)                    size: 1751837 bytes
+(epstopdf)             Output file: <Part2_Case_B4_Temp-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:06:05
+(epstopdf)                    size: 270463 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part2_Case_B4_Temp-eps-con
+verted-to.pdf Part2_Case_B4_Temp.eps>
+(epstopdf)             \includegraphics on input line 319.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Part2_Case_B4_Temp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Part2_Case_B4_Temp-eps-converted-to.pdf, id=199, 545.03625pt x 75.28125pt>
+File: Part2_Case_B4_Temp-eps-converted-to.pdf Graphic file (type pdf)
+<use Part2_Case_B4_Temp-eps-converted-to.pdf>
+Package pdftex.def Info: Part2_Case_B4_Temp-eps-converted-to.pdf  used on input
+ line 319.
+(pdftex.def)             Requested size: 345.0pt x 47.65141pt.
+[9 <./Probe_history2A-eps-converted-to.pdf>] [10 <./Part2_Case_B1_Velocity-eps-
+converted-to.pdf> <./Part2_Case_B1_Temp-eps-converted-to.pdf> <./Part2_Case_B2_
+Velocity-eps-converted-to.pdf> <./Part2_Case_B2_Temp-eps-converted-to.pdf> <./P
+art2_Case_B3_Velocity-eps-converted-to.pdf> <./Part2_Case_B3_Temp-eps-converted
+-to.pdf> <./Part2_Case_B4_Velocity-eps-converted-to.pdf> <./Part2_Case_B4_Temp-
+eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 350.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 350.
+ [11]
+Package epstopdf Info: Source file: <findpeaks.eps>
+(epstopdf)                    date: 2020-03-29 13:30:53
+(epstopdf)                    size: 107199 bytes
+(epstopdf)             Output file: <findpeaks-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-29 13:33:09
+(epstopdf)                    size: 9473 bytes
+(epstopdf)             Command: <repstopdf --outfile=findpeaks-eps-converted-to
+.pdf findpeaks.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./findpeaks-eps-converted-to.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<findpeaks-eps-converted-to.pdf, id=295, 633.36626pt x 210.7875pt>
+File: findpeaks-eps-converted-to.pdf Graphic file (type pdf)
+<use findpeaks-eps-converted-to.pdf>
+Package pdftex.def Info: findpeaks-eps-converted-to.pdf  used on input line 367
+.
+(pdftex.def)             Requested size: 345.0pt x 114.82062pt.
+Package epstopdf Info: Source file: <Probe_history2.eps>
+(epstopdf)                    date: 2020-03-30 09:58:51
+(epstopdf)                    size: 260429 bytes
+(epstopdf)             Output file: <Probe_history2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-30 10:23:31
+(epstopdf)                    size: 40027 bytes
+(epstopdf)             Command: <repstopdf --outfile=Probe_history2-eps-convert
+ed-to.pdf Probe_history2.eps>
+(epstopdf)             \includegraphics on input line 381.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Probe_history2-eps-converted-to.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Probe_history2-eps-converted-to.pdf, id=296, 349.305pt x 113.42375pt>
+File: Probe_history2-eps-converted-to.pdf Graphic file (type pdf)
+<use Probe_history2-eps-converted-to.pdf>
+Package pdftex.def Info: Probe_history2-eps-converted-to.pdf  used on input lin
+e 381.
+(pdftex.def)             Requested size: 345.0pt x 112.03197pt.
+[12 <./findpeaks-eps-converted-to.pdf> <./Probe_history2-eps-converted-to.pdf>]
+(./Nobis_project.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3895 strings out of 494880
- 55545 string characters out of 6179600
- 117164 words of memory out of 5000000
- 7165 multiletter control sequences out of 15000+600000
- 6895 words of font info for 27 fonts, out of 8000000 for 9000
+ 4101 strings out of 494880
+ 62102 string characters out of 6179600
+ 118690 words of memory out of 5000000
+ 7338 multiletter control sequences out of 15000+600000
+ 7203 words of font info for 28 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,8n,39p,467b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Nobis_project.pdf (6 pages, 982428 bytes).
+ 41i,9n,39p,744b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti10.pfb>
+Output written on Nobis_project.pdf (12 pages, 5352435 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 349 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 
